@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Providers from "./providers";
+import { ToastProvider, ToastViewport } from "@radix-ui/react-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,8 +31,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-
-          {children}
+          <ToastProvider>
+            {children}
+            <ToastViewport />
+          </ToastProvider>
         </Providers>
       </body>
     </html>

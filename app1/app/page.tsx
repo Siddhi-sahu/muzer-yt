@@ -2,27 +2,17 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MusicIcon, UsersIcon, TrendingUpIcon, HeadphonesIcon } from "lucide-react"
 import Link from "next/link"
+import { Appbar } from "./my-components/Appbar"
+import { Redirect } from "./my-components/Redirect"
 
 export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-purple-50 to-purple-100 dark:from-gray-900 dark:to-gray-800">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-white dark:bg-gray-800 shadow-sm">
-        <Link className="flex items-center justify-center" href="#">
-          <MusicIcon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
-          <span className="ml-2 text-2xl font-bold text-purple-600 dark:text-purple-400">MusicStreamChoice</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:text-purple-600 dark:hover:text-purple-400" href="#">
-            Features
-          </Link>
-          <Link className="text-sm font-medium hover:text-purple-600 dark:hover:text-purple-400" href="#">
-            Pricing
-          </Link>
-          <Link className="text-sm font-medium hover:text-purple-600 dark:hover:text-purple-400" href="#">
-            Contact
-          </Link>
-        </nav>
-      </header>
+
+      <Appbar />
+      <Redirect />
+
+
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
@@ -91,7 +81,7 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white dark:bg-gray-800">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-purple-200 dark:bg-gray-800">
         <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 MusicStreamChoice. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4 text-purple-600 dark:text-purple-400" href="#">
